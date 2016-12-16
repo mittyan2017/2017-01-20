@@ -1,29 +1,35 @@
 package ICCharger;
 
 public class MainShopCharger {
-	StudentCard insertedStudentCard;
+	static StudentCard insertedStudentCard;
 	
-	void insertStudentCard(StudentCard _Card){
+	static void insertStudentCard(StudentCard _Card){
 		insertedStudentCard=_Card;
 	}
 	
-	void chargeMoney(int _moneyNum){//チャージする
+	static void chargeMoney(int _moneyNum){//チャージする
 		if(insertedStudentCard!=null){
 			insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
-			printAccountBalance();
 		}
 		else {
 			System.out.println("学生証が挿入されていません");
 		}
 	}
 	
-	void printAccountBalance(){
+	static void printAccountBalance(){
 		System.out.println("Name:"+insertedStudentCard.get_studentName() + "残高:"+insertedStudentCard.get_money());
 	}
 	public static void main(String[] args) {
+		StudentCard StudentCard1=new StudentCard();
+		StudentCard StudentCard2=new StudentCard();
+
+		insertStudentCard(StudentCard1);
+		chargeMoney(100);
+		printAccountBalance();
 		
-		
-		System.out.println("test");
+		insertStudentCard(StudentCard2);
+		chargeMoney(200);
+		printAccountBalance();
 		
 	}
 

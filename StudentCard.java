@@ -5,7 +5,7 @@ public class StudentCard {
 	private String studentName;
 	private int studentNum;
 	private int accountBalance;//‹à
-	private ArrayList<StudentCard> studentCardList_;
+	private ArrayList<StudentCard> studentCardList_=new ArrayList<StudentCard>();
 	
 	StudentCard(){
 		studentCardList_.add(this);
