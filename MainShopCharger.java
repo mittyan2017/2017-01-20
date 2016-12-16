@@ -12,6 +12,9 @@ public class MainShopCharger {
 			insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
 			printAccountBalance();
 		}
+		else {
+			System.out.println("Šw¶Ø‚ª‘}“ü‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ");
+		}
 	}
 	
 	void printAccountBalance(){
