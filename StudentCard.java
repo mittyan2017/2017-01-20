@@ -17,4 +17,9 @@ public class StudentCard {
 	void set_money(int _money){
 		accountBalance=_money;
 	}
+	
+	String get_studentName(){
+		return studentName;
+	}
+	
 }
