@@ -8,8 +8,10 @@ public class MainShopCharger {
 	}
 	
 	void chargeMoney(int _moneyNum){//ƒ`ƒƒ[ƒW‚·‚é
-		insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
-		printAccountBalance();
+		if(insertedStudentCard!=null){
+			insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
+			printAccountBalance();
+		}
 	}
 	
 	void printAccountBalance(){
