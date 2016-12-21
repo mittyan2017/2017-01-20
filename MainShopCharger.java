@@ -17,7 +17,7 @@ public class MainShopCharger {
 		ShopCharger1.chargeMoney(200);
 		ShopCharger1.printAccountBalance();
 		
-		System.out.println("発行学生証枚数："+ StudentCard.get_studentCardList().size());
+		System.out.println("発行学生証枚数："+ StudentCard.getStudentCardList().size());
 
 		ShopCharger.printChargeMemory();//履歴表示
 	}

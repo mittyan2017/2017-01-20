@@ -22,30 +22,30 @@ public class StudentCard {
 	
 	
 	//セッター・ゲッター
-	String get_studentName(){//学生名を返す
+	String getStudentName(){//学生名を返す
 		return studentName;
 	}
-	void set_studentName(String _str){//学生名をセット
+	void setStudentName(String _str){//学生名をセット
 		studentName=_str;
 	}
 	
 	//学生番号を返す
-	int get_studentNum(){//学生番号を返す
+	int getStudentNum(){//学生番号を返す
 		return studentNum;
 	}
 	//学生番号をセット
-	void set_studentNum(int _num){//学生番号をセット
+	void setStudentNum(int _num){//学生番号をセット
 		studentNum=_num;
 	}
 	
-	int get_money(){//チャージ残高を返す
+	int getMoney(){//チャージ残高を返す
 		return accountBalance;
 	}
-	void set_money(int _money){//チャージ残高をセット
+	void setMoney(int _money){//チャージ残高をセット
 		accountBalance=_money;
 	}
 	
-	static ArrayList<StudentCard> get_studentCardList(){
+	static ArrayList<StudentCard> getStudentCardList(){
 		return studentCardList_;
 	}
 }
