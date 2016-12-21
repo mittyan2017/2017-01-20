@@ -6,7 +6,7 @@ public class StudentCard {
 	private String studentName;//学生名
 	private int studentNum;//学生番号
 	private int accountBalance;//チャージ残高
-	private ArrayList<StudentCard> studentCardList_=new ArrayList<StudentCard>();//学生証のリスト
+	static private ArrayList<StudentCard> studentCardList_=new ArrayList<StudentCard>();//学生証のリスト
 	
 	//コンストラクタ
 	StudentCard(){
