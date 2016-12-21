@@ -11,11 +11,14 @@ public class MainShopCharger {
 		ShopCharger1.chargeMoney(100);//残高を出し入れする　＋で入金　－で引き出し
 		ShopCharger1.printAccountBalance();//学生名と残高を表示
 		ShopCharger1.chargeMoney(-500);//残高引き出し
+		ShopCharger1.putOutStidentCard();//学生証を排出
 		
-		ShopCharger1.insertStudentCard(StudentCard2);
+		//ShopCharger1.insertStudentCard(StudentCard2);
 		ShopCharger1.chargeMoney(200);
 		ShopCharger1.printAccountBalance();
 		
+		System.out.println("発行学生証枚数："+ StudentCard.get_studentCardList().size());
+
 	}
 
 }

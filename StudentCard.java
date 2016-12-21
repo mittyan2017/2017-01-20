@@ -45,4 +45,7 @@ public class StudentCard {
 		accountBalance=_money;
 	}
 	
+	static ArrayList<StudentCard> get_studentCardList(){
+		return studentCardList_;
+	}
 }
