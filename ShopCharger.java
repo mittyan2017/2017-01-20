@@ -1,22 +1,25 @@
 package ICCharger;
 
 public class ShopCharger {
-	static StudentCard insertedStudentCard;
+	StudentCard insertedStudentCard;
 	
-	static void insertStudentCard(StudentCard _Card){
+	void insertStudentCard(StudentCard _Card){
 		insertedStudentCard=_Card;
 	}
 	
-	static void chargeMoney(int _moneyNum){//チャージする
-		if(insertedStudentCard!=null){
-			insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
+	void chargeMoney(int _moneyNum){//チャージする
+		if(insertedStudentCard==null){
+			System.out.println("学生証が挿入されていません");
+		}
+		if(insertedStudentCard.get_money()+_moneyNum<0){
+			System.out.println("残高が不足しています。　残高："+insertedStudentCard.get_money());
 		}
 		else {
-			System.out.println("学生証が挿入されていません");
+			insertedStudentCard.set_money(insertedStudentCard.get_money()+_moneyNum);
 		}
 	}
 	
-	static void printAccountBalance(){
-		System.out.println("Name:"+insertedStudentCard.get_studentName() + "残高:"+insertedStudentCard.get_money());
+	void printAccountBalance(){
+		System.out.println("Name:"+insertedStudentCard.get_studentName() + "　残高:"+insertedStudentCard.get_money());
 	}
 }
