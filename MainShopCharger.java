@@ -4,7 +4,7 @@ package ICCharger;
 public class MainShopCharger {
 	public static void main(String[] args) {
 		ShopCharger ShopCharger1=new ShopCharger();//チャージャークラス
-		StudentCard StudentCard1=new StudentCard();//カードクラス１
+		StudentCard StudentCard1=new StudentCard("太郎",123456,0);//カードクラス１
 		StudentCard StudentCard2=new StudentCard();//カードクラス２
 
 		ShopCharger1.insertStudentCard(StudentCard1);//挿入
@@ -19,6 +19,7 @@ public class MainShopCharger {
 		
 		System.out.println("発行学生証枚数："+ StudentCard.get_studentCardList().size());
 
+		ShopCharger.printChargeMemory();//履歴表示
 	}
 
 }
